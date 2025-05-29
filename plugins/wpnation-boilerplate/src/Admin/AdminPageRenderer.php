@@ -7,12 +7,12 @@ class AdminPageRenderer
     public function render(): void
     {
 
-        echo '<div id="wpncommerce-admin-root"></div>';
+        echo '<div id="wpnboilerpalte-admin-root"></div>';
 
 
 
         wp_enqueue_script(
-            'wpncommerce-admin',
+            'wpnboilerplate-admin',
             plugin_dir_url(__DIR__) . '../admin/build/main.js',
             ['react-jsx-runtime', 'wp-element'],
             null,

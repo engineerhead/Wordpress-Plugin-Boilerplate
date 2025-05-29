@@ -11,12 +11,12 @@ class AdminMenuRegistrar
     public function register(): void
     {
         add_menu_page(
-            'Products',
-            'Products',
+            'WPNBoilerplate',
+            'WPNBoilerplate',
             'manage_options',
-            'myplugin_products',
+            'myplugin_wpnboilerplate',
             [$this->renderer, 'render'],
-            'dashicons-products',
+            'dashicons-admin-generic',
             20
         );
     }
