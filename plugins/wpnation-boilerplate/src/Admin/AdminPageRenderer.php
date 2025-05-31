@@ -7,7 +7,7 @@ class AdminPageRenderer
     public function render(): void
     {
 
-        echo '<div id="wpnboilerpalte-admin-root"></div>';
+        echo '<div id="wpnboilerplate-admin-root"></div>';
 
 
 
