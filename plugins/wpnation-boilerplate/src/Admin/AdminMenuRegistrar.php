@@ -14,7 +14,7 @@ class AdminMenuRegistrar
             'WPNBoilerplate',
             'WPNBoilerplate',
             'manage_options',
-            'myplugin_wpnboilerplate',
+            'wpnboilerplate',
             [$this->renderer, 'render'],
             'dashicons-admin-generic',
             20
