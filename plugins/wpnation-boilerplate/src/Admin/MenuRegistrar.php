@@ -2,12 +2,11 @@
 
 namespace WPNBoilerplate\Admin;
 
-use WPNBoilerplate\Admin\AdminPageRenderer;
+use WPNBoilerplate\Admin\PageRenderer;
 
-class AdminMenuRegistrar
+class MenuRegistrar
 {
-    public function __construct(protected AdminPageRenderer $renderer) {}
-
+    public function __construct(protected PageRenderer $renderer) {}
     public function register(): void
     {
         add_menu_page(

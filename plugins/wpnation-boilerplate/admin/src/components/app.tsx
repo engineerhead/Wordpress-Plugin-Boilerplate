@@ -1,7 +1,7 @@
 export default function App() {
     return (
         <div>
-            WPNation
+            <h1>WPNation Boilerplate Admin</h1>
         </div>
     );
 }

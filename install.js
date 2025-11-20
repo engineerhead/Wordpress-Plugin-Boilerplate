@@ -108,9 +108,9 @@ async function main() {
 
         let content = fs.readFileSync(file, 'utf8');
         const newContent = content
-            .replaceAll(oldValues.name, newValues.name)
-            .replaceAll(oldValues.namespace, newValues.namespace)
-            .replaceAll(oldValues.author, newValues.author)
+            .replaceAll(new RegExp(oldValues.name, 'gi'), newValues.name)
+            .replaceAll(new RegExp(oldValues.namespace, 'gi'), newValues.namespace)
+            .replaceAll(new RegExp(oldValues.author, 'gi'), newValues.author)
 
 
         if (content !== newContent) {

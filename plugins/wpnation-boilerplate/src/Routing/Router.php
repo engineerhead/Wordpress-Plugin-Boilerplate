@@ -2,11 +2,11 @@
 
 namespace WPNBoilerplate\Routing;
 
-use WPNBoilerplate\Admin\AdminMenuRegistrar;
+use WPNBoilerplate\Admin\MenuRegistrar;
 
 class Router
 {
-    public function __construct(protected AdminMenuRegistrar $adminMenuRegistrar) {}
+    public function __construct(protected MenuRegistrar $adminMenuRegistrar) {}
     public function register()
     {
         $this->adminMenuRegistrar->register();
