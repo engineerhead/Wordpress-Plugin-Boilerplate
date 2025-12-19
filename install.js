@@ -63,8 +63,7 @@ function handleDockerFiles(file, oldValues, newValues) {
     const dockerFile = fs.readFileSync(file, 'utf8');
     const newDockerFile = dockerFile
         .replaceAll(
-            oldValues.name.replaceAll(' ', '-').toLowerCase(),
-            newValues.name.replaceAll(' ', '-').toLowerCase()
+            new RegExp(oldValues.name.replaceAll(' ', '-'), 'gi'), newValues.name.replaceAll(' ', '-').toLowerCase()
         );
 
     if (dockerFile !== newDockerFile) {

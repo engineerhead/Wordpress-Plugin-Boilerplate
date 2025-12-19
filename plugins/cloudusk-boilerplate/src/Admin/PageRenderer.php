@@ -6,6 +6,7 @@ class PageRenderer
 {
     public function render(): void
     {
+        echo "<div id='ClouduskBoilerplate-admin-root'></div>";
 
         $asset_file = plugin_dir_path(__FILE__) . '../../admin/build/main.asset.php';
 

@@ -3,5 +3,7 @@ import App from './components/app';
 
 const root = document.getElementById('ClouduskBoilerplate-admin-root');
 
-createRoot(root).render(<App />);
+if (root) {
+    createRoot(root).render(<App />);
+}
 
