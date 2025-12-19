@@ -1,8 +1,8 @@
 <?php
 
-namespace WPNBoilerplate\Routing;
+namespace ClouduskBoilerplate\Routing;
 
-use WPNBoilerplate\Admin\MenuRegistrar;
+use ClouduskBoilerplate\Admin\MenuRegistrar;
 
 class Router
 {

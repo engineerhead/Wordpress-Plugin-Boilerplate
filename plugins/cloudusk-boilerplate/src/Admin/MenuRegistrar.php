@@ -1,8 +1,8 @@
 <?php
 
-namespace WPNBoilerplate\Admin;
+namespace ClouduskBoilerplate\Admin;
 
-use WPNBoilerplate\Admin\PageRenderer;
+use ClouduskBoilerplate\Admin\PageRenderer;
 
 class MenuRegistrar
 {
@@ -10,10 +10,10 @@ class MenuRegistrar
     public function register(): void
     {
         add_menu_page(
-            'WPNBoilerplate',
-            'WPNBoilerplate',
+            'ClouduskBoilerplate',
+            'ClouduskBoilerplate',
             'manage_options',
-            'wpnboilerplate',
+            'ClouduskBoilerplate',
             [$this->renderer, 'render'],
             'dashicons-admin-generic',
             20

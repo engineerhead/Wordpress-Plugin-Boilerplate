@@ -1,6 +1,6 @@
 <?php
 
-namespace WPNBoilerplate\Admin;
+namespace ClouduskBoilerplate\Admin;
 
 class PageRenderer
 {

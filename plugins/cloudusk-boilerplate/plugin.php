@@ -1,19 +1,19 @@
 <?php
 
 /**
- * Plugin Name: WPNation Boilerplate
+ * Plugin Name: Cloudusk Boilerplate
  * Description: A boilerplate for WordPress plugins.
  * Version: 0.0.1
- * Author: Umair Bussi
- * Author URI: https://umairbussi.com
+ * Author: Cloudusk
+ * Author URI: https://cloudusk.com
  * License: GPL-2.0+
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  */
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-use WPNBoilerplate\Core\ContainerBuilderFactory;
-use WPNBoilerplate\Plugin;
+use ClouduskBoilerplate\Core\ContainerBuilderFactory;
+use ClouduskBoilerplate\Plugin;
 
 $container = ContainerBuilderFactory::build();
 $plugin = new Plugin($container);

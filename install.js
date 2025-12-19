@@ -7,12 +7,12 @@ const readline = require('readline');
 const CONFIG_FILE = 'rename.conf.json';
 
 const oldValues = {
-    name: 'WPNation Boilerplate',
-    namespace: 'WPNBoilerplate',
-    author: 'Umair Bussi'
+    name: 'Cloudusk Boilerplate',
+    namespace: 'ClouduskBoilerplate',
+    author: 'Cloudusk'
 };
 
-const fileExtensions = ['.php', '.json', '.yaml'];
+const fileExtensions = ['.php', '.json', '.yaml', '.tsx'];
 const hasYesFlag = process.argv.includes('--yes');
 
 function ask(question, defaultValue) {
@@ -88,8 +88,8 @@ async function main() {
     }
     else {
         newValues = {
-            name: await ask('Enter new plugin name', config.name || 'WPNation Boilerplate'),
-            namespace: await ask('Enter new PHP namespace', config.namespace || 'WPNBoilerplate'),
+            name: await ask('Enter new plugin name', config.name || 'Cloudusk Boilerplate'),
+            namespace: await ask('Enter new PHP namespace', config.namespace || 'ClouduskBoilerplate'),
             author: await ask('Enter author name', 'Umair Bussi'),
 
         };

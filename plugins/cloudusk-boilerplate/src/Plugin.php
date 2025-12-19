@@ -1,6 +1,6 @@
 <?php
 
-namespace WPNBoilerplate;
+namespace ClouduskBoilerplate;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
@@ -10,6 +10,6 @@ class Plugin
 
     public function boot(): void
     {
-        add_action('init', [$this->container->get("WPNBoilerplate\Routing\Router"), 'register']);
+        add_action('init', [$this->container->get("ClouduskBoilerplate\Routing\Router"), 'register']);
     }
 }

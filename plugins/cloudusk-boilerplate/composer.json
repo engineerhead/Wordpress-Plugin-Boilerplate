@@ -6,7 +6,7 @@
   },
   "autoload": {
     "psr-4": {
-      "WPNBoilerplate\\": "src/"
+      "ClouduskBoilerplate\\": "src/"
     }
   }
 }

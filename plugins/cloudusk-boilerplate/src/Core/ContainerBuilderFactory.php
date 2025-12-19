@@ -1,6 +1,6 @@
 <?php
 
-namespace WPNBoilerplate\Core;
+namespace ClouduskBoilerplate\Core;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
