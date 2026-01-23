@@ -72,6 +72,12 @@ function handleDockerFiles(file, oldValues, newValues) {
     }
 }
 
+function renamePluginFile(newName) {
+    const name = newName.replaceAll(' ', '-').toLowerCase();
+    const pluginPath = 'plugins/cloudusk-boilerplate/';
+    fs.renameSync(pluginPath + "plugin.php", pluginPath + name + ".php");
+
+}
 async function main() {
     const config = loadConfig();
 
@@ -95,7 +101,7 @@ async function main() {
     }
 
 
-
+    renamePluginFile(newValues.name);
 
     console.log('\n🔍 Replacing content in files...\n');
 
