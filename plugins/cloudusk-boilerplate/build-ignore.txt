@@ -1,0 +1,49 @@
+# Node.js
+node_modules/
+package.json
+package-lock.json
+yarn.lock
+
+# Composer (dev tools)
+composer.lock
+phpunit.xml
+phpunit.xml.dist
+vendor/bin/
+vendor/composer/installed.json
+vendor/composer/installed.php
+
+# Build tools
+webpack.config.js
+babel.config.js
+.babelrc
+.eslintrc
+.stylelintrc
+.postcssrc
+.editorconfig
+.env
+.env.*
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Tests
+tests/
+test/
+*.log
+
+# Misc
+*.zip
+build-release.sh
+*.md
+*.cache
+.vscode/
+.idea/
+*.code-workspace
+.DS_Store
+Thumbs.db
+
+*.sh
+admin/src
+bin/
