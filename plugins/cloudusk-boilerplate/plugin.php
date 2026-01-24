@@ -16,9 +16,9 @@ if (! defined('ABSPATH')) {
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-use ClouduskBoilerplate\Core\ContainerBuilderFactory;
+use ClouduskBoilerplate\DI\ContainerBuilderFactory;
 use ClouduskBoilerplate\Plugin;
 
-$ClouduskBoilerPlateContainer = ContainerBuilderFactory::build();
-$ClouduskBoilerPlatePlugin = new Plugin($ClouduskBoilerPlateContainer);
-$ClouduskBoilerPlatePlugin->boot();
+$ClouduskBoilerplateContainer = ContainerBuilderFactory::build();
+$ClouduskBoilerplatePlugin = new Plugin($ClouduskBoilerplateContainer);
+$ClouduskBoilerplatePlugin->boot();

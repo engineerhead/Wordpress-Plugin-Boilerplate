@@ -7,3 +7,5 @@ services:
     resource: '../Admin'
   ClouduskBoilerplate\Routing\:
     resource: '../Routing'
+  ClouduskBoilerplate\Core\:
+    resource: '../Core'
