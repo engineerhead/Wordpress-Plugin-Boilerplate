@@ -1,4 +1,5 @@
 {
+  "name": "cloudusk/clouduskboilerplate",
   "require": {
     "symfony/dependency-injection": "^6.0",
     "symfony/config": "^6.0",
