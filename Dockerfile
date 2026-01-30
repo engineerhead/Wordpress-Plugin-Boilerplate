@@ -5,8 +5,8 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
     && chmod +x wp-cli.phar \
     && mv wp-cli.phar /usr/local/bin/wp
 WORKDIR /var/www/html/wp-content/plugins/${PLUGIN_NAME}
-COPY plugins/${PLUGIN_NAME}/composer.json plugins/${PLUGIN_NAME}/composer.lock ./
-RUN composer install
+COPY plugins/${PLUGIN_NAME}/composer.json ./
+RUN composer install -o
 WORKDIR /var/www/html
 
 FROM node:lts-slim AS node
