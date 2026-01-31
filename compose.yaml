@@ -16,6 +16,15 @@ services:
         depends_on:
             - db
 
+    composer:
+        build:
+            context: .
+            target: php
+        working_dir: /var/www/html/wp-content/plugins/cloudusk-boilerplate
+        volumes:
+            - wordpress_data:/var/www/html
+            - ./plugins/cloudusk-boilerplate:/var/www/html/wp-content/plugins/cloudusk-boilerplate
+        command: [ "composer", "install" ]
     db:
         image: mariadb:latest
         environment:
