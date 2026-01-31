@@ -9,7 +9,8 @@ const CONFIG_FILE = 'rename.conf.json';
 const oldValues = {
     name: 'Cloudusk Boilerplate',
     namespace: 'ClouduskBoilerplate',
-    author: 'Umair Bussi'
+    author: 'Umair Bussi',
+    organization: 'organization'
 };
 
 const fileExtensions = ['.php', '.json', '.yaml', '.tsx'];
@@ -104,7 +105,8 @@ async function main() {
         newValues = {
             name: config.name || oldValues.name,
             namespace: config.namespace || oldValues.namespace,
-            author: config.author || oldValues.author
+            author: config.author || oldValues.author,
+            organization: config.organization || oldValues.organization
         };
     }
     else {
@@ -112,6 +114,7 @@ async function main() {
             name: await ask('Enter new plugin name', config.name || 'Cloudusk Boilerplate'),
             namespace: await ask('Enter new PHP namespace', config.namespace || 'ClouduskBoilerplate'),
             author: await ask('Enter author name', 'Umair'),
+            organization: await ask('Enter organization name', 'organization')
 
         };
     }
