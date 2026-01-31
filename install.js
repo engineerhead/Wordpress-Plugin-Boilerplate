@@ -10,7 +10,7 @@ const oldValues = {
     name: 'Cloudusk Boilerplate',
     namespace: 'ClouduskBoilerplate',
     author: 'Umair Bussi',
-    organization: 'organization'
+    package: 'organization/package-name'
 };
 
 const fileExtensions = ['.php', '.json', '.yaml', '.tsx'];
@@ -85,7 +85,7 @@ function handleComposerFile(newValues) {
     const composerFile = fs.readFileSync(composerPath, 'utf8');
     const newComposerFile = composerFile
         .replaceAll(
-            new RegExp(`"name": ".*"`, 'gi'), `"name": "${newValues.organization || 'organization'}/${newValues.name.replaceAll(' ', '-').toLowerCase()}"`
+            new RegExp(`"name": ".*"`, 'gi'), `"name": "${newValues.package || 'organization/package-name'}"`
 
         );
 
@@ -106,7 +106,7 @@ async function main() {
             name: config.name || oldValues.name,
             namespace: config.namespace || oldValues.namespace,
             author: config.author || oldValues.author,
-            organization: config.organization || oldValues.organization
+            package: config.package || oldValues.package
         };
     }
     else {
@@ -114,7 +114,7 @@ async function main() {
             name: await ask('Enter new plugin name', config.name || 'Cloudusk Boilerplate'),
             namespace: await ask('Enter new PHP namespace', config.namespace || 'ClouduskBoilerplate'),
             author: await ask('Enter author name', 'Umair'),
-            organization: await ask('Enter organization name', 'organization')
+            package: await ask('Enter package name', 'organization/package-name')
 
         };
     }
