@@ -78,6 +78,22 @@ function renamePluginFile(newName) {
     fs.renameSync(pluginPath + "plugin.php", pluginPath + name + ".php");
 
 }
+
+function handleComposerFile(newValues) {
+    const composerPath = 'plugins/cloudusk-boilerplate/composer.json';
+    const composerFile = fs.readFileSync(composerPath, 'utf8');
+    const newComposerFile = composerFile
+        .replaceAll(
+            new RegExp(`"name": ".*"`, 'gi'), `"name": "${newValues.organization || 'organization'}/${newValues.name.replaceAll(' ', '-').toLowerCase()}"`
+
+        );
+
+    if (composerFile !== newComposerFile) {
+        fs.writeFileSync(composerPath, newComposerFile);
+
+    }
+}
+
 async function main() {
     const config = loadConfig();
 
@@ -126,7 +142,7 @@ async function main() {
 
     handleDockerFiles('Dockerfile', oldValues, newValues);
     handleDockerFiles('compose.yaml', oldValues, newValues);
-
+    handleComposerFile(newValues);
 
     const cwd = process.cwd();
     const oldDir = cwd + '/plugins/' + oldValues.name.replaceAll(' ', '-').toLowerCase();

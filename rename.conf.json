@@ -1,5 +1,6 @@
 {
     "name": "My Plugin Name",
     "namespace": "MyPluginNamespace",
-    "author": "Umair Bussi"
+    "author": "Umair Bussi",
+    "organization": "cloudusk"
 }
