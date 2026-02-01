@@ -24,7 +24,7 @@ services:
         volumes:
             - wordpress_data:/var/www/html
             - ./plugins/cloudusk-boilerplate:/var/www/html/wp-content/plugins/cloudusk-boilerplate
-        command: [ "composer", "install" ]
+        command: composer install
     db:
         image: mariadb:latest
         environment:
